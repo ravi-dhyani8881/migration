@@ -9,9 +9,9 @@ Steps to run application
 
 2 -> Go to dir D:\migration\src\main\java\com\migration\tool\migration
 
-3 -> run MigrationApplication.java as a spring application
+3 -> run MigrationApplication.java as a spring boot application
 
 4 -> Go to dir D:\migration\src\main\angular-front
 
-5 -> run the below command in terminal-> ng serve --open
+5 -> Run the below command in terminal-> ng serve --open
 
