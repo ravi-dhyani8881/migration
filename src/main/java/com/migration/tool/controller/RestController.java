@@ -1,4 +1,4 @@
-package com.migration.tool.migration;
+package com.migration.tool.controller;
 
 import java.util.ArrayList;
 import java.util.HashMap;

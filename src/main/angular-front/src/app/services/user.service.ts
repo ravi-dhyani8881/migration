@@ -9,7 +9,7 @@ export class UserService {
    }
  
    getUsers(): Observable<User[]> {
-      return this.http.get("http://localhost:8888/api/users")
+      return this.http.get("http://localhost:8888/user/getAllUser")
          .map((res: Response) => res.json())
          .catch((error: any) => Observable.throw(error.json().error || 'Server error'));
    }
