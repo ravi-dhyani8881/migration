@@ -15,3 +15,10 @@ Steps to run application
 
 5 -> Run the below command in terminal-> ng serve --open
 
+
+Method =post
+http://localhost:8888/user/add?name=First&email=someemail@someemailprovider.com&userName=ravi8881&userPassword=ravi8881&lastName=ravi
+
+Method=get
+
+http://localhost:8888/user/getAllUser
