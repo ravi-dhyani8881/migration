@@ -18,19 +18,10 @@
 <div class="main">
 <form action="Schdular" method="get">
 <label>Name :</label>
-<input type="text" name="sname" id="Name"/>
-<label>Date to execute :</label>
-<input type="text" name="selected_date" id="datepicker"/>
-<label>Select Date Format :</label>
-<select id="format">
-<option value="mm/dd/yy">Default - mm/dd/yyyy</option>
-<option value="dd/mm/yy">dd/mm/yyyy</option>
-<option value="yy-mm-dd">ISO 8601 - yyyy-mm-dd</option>
-<option value="d M, y">Short - d M, y</option>
-<option value="d MM, y">Medium - d MM, y</option>
-<option value="DD, d MM, yy">Full - DD, d MM, yyyy</option>
-<option value="&apos;day&apos; d &apos;of&apos; MM &apos;in the year&apos; yy">With text - 'day' d 'of' MM 'in the year' yyyy</option>
-</select>
+<input type="text" name="jobName" id="Name"/>
+<label>DateTime :</label></br>
+<input  id="datetime" name="dateTime" type="datetime-local" value="2000-01-01T00:00:00+05:00">
+ 
 <input type="submit" id="submit" value="Submit">
 </form>
 </div>

@@ -1,5 +1,9 @@
 package com.migration.tool.migration;
 
+import java.util.concurrent.Executors;
+import java.util.concurrent.ScheduledExecutorService;
+import java.util.concurrent.TimeUnit;
+
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
@@ -16,13 +20,16 @@ public class MainController {
 	
 	
 	@RequestMapping(value="/Schdular" , method= RequestMethod.GET )
-	public ModelAndView addSchdular(@RequestParam("sname") String username,@RequestParam("selected_date") String username2,@RequestParam("selected_date") String format) {
+	public ModelAndView addSchdular(@RequestParam("jobName") String jobName,@RequestParam("dateTime") String dateTime) {
 						
-		System.out.println("Added Schdular"+username+"----->username2"+username2+"------->format"+format);
+			
+		Util util=new Util();
+		Long diffInSec = util.dateTimeDiff(dateTime);
 		
-		return new ModelAndView("addSchdular").addObject("message", username);
+		ScheduledExecutorService service = Executors.newScheduledThreadPool(1);
+		service.schedule(new PentahoRun(jobName), diffInSec, TimeUnit.SECONDS);
+		
+		return new ModelAndView("addSchdular").addObject("message", jobName);
 	}
 	
 }
-
-
